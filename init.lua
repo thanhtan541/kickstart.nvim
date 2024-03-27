@@ -263,7 +263,8 @@ require('telescope').setup {
     file_ignore_patterns = {
       "target/.*", -- Rust
       "node_modules/.*", -- Node
-      "dist/.*" -- Jekyll
+      "dist/.*", -- Node
+      "_site/.*" -- Jekyll
     },
   },
 }

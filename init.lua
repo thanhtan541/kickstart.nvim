@@ -260,7 +260,11 @@ require('telescope').setup {
         ['<C-d>'] = false,
       },
     },
-    file_ignore_patterns = { "target/.*", "node_modules/.*", "dist/.*"},
+    file_ignore_patterns = {
+      "target/.*", -- Rust
+      "node_modules/.*", -- Node
+      "dist/.*" -- Jekyll
+    },
   },
 }
 

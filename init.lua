@@ -264,7 +264,8 @@ require('telescope').setup {
       "target/.*", -- Rust
       "node_modules/.*", -- Node
       "dist/.*", -- Node
-      "_site/.*" -- Jekyll
+      "_site/.*", -- Jekyll
+      "build/.*" -- Java
     },
   },
 }

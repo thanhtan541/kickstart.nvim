@@ -191,6 +191,12 @@ require('lazy').setup({
   --    An additional note is that if you only copied in the `init.lua`, you can just comment this line
   --    to get rid of the warning telling you that there are not plugins in `lua/custom/plugins/`.
   { import = 'custom.plugins' },
+  {
+    "danymat/neogen",
+    config = true,
+    -- Uncomment next line if you want to follow only stable versions
+    -- version = "*" 
+  },
 }, {})
 
 -- [[ Setting options ]]
@@ -422,6 +428,15 @@ local servers = {
   -- gopls = {},
   -- pyright = {},
   rust_analyzer = {
+    procMacro = {
+      ignored = {
+        leptos_macro = {
+            -- optional: --
+            -- "component",
+            "server",
+        },
+      },
+    },
     checkOnSave = {
       command = "clippy",
     },
